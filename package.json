@@ -1,0 +1,59 @@
+{
+  "name": "webdriverio-tips-tricks",
+  "version": "1.0.0",
+  "description": "WebdriverIO tips and tricks tasks",
+  "scripts": {
+    "test": "wdio config/wdio.conf.js",
+    "wdio": "wdio run wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.godeltech.com/SDET_Mastery/d.makaveyeu/webdriverio-tips-tricks.git"
+  },
+  "author": "Dima Makoveev",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "~7.12.17",
+    "@babel/core": "~7.12.17",
+    "@babel/plugin-proposal-class-properties": "~7.12.1",
+    "@babel/preset-env": "~7.12.11",
+    "@babel/register": "~7.12.13",
+    "@wdio/allure-reporter": "~7.19.5",
+    "@wdio/mocha-framework": "~7.19.5",
+    "@wdio/cli": "~7.19.5",
+    "@wdio/config": "~7.19.5",
+    "@wdio/local-runner": "~7.19.5",
+    "@wdio/selenium-standalone-service": "~7.19.5",
+    "@wdio/spec-reporter": "~7.19.5",
+    "@wdio/sync": "~7.19.5",
+    "allure-commandline": "^2.13.8",
+    "chai": "~4.2.0",
+    "lodash": "~4.17.20",
+    "webdriverio": "~7.19.5"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
+    ],
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "node": 10
+          }
+        }
+      ]
+    ]
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {}
+}
