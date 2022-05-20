@@ -4,19 +4,18 @@ const info = async message => {
 
 module.exports = {
   info,
-  logTestName: async testName => {
-    info(`=====================  Test case: '${await testName}' =====================`);
+  logTestName: testName => {
+    info(`=====================  Test case: '${testName}' =====================`);
   },
 
-  logTestEnd: async test => {
-    if (await test.passed) {
-      info(`***** Test case: '${await test.title}' passed! *****`);
+  logTestEnd: test => {
+    if (test.passed) {
+      info(`***** Test case: '${test.title}' passed! *****`);
     } else {
-      await browser.takeScreenshot();
-      await info(`>>>>>>>> TEST FAILED <<<<<<<<`);
+      info(`>>>>>>>> TEST FAILED <<<<<<<<`);
     }
   },
-  logStep: async stepName => {
-    info(`--------==[ [Step]: ${await stepName} ]==--------`);
+  logStep: stepName => {
+    info(`--------==[ [Step]: ${stepName} ]==--------`);
   },
 }
